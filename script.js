@@ -197,6 +197,7 @@ const siteNav = document.querySelector('.site-nav');
 
 menuToggle.addEventListener('click', () => {
   const isOpen = siteNav.classList.toggle('is-open');
+  menuToggle.classList.toggle('is-active', isOpen);
   menuToggle.setAttribute('aria-expanded', String(isOpen));
 });
 

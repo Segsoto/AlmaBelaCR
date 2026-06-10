@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ubicación de Almabela en Grecia, Alajuela, con mapa interactivo y acceso directo a Google Maps." />
+  <title>Almabela | Ubicación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar topbar--fixed">
+      <a class="brand" href="index.html#inicio" aria-label="Almabela inicio">
+        <img class="brand-logo" src="img/logo1.jpg" alt="Logo de Almabela" />
+        <span>
+          <strong>Almabela</strong>
+          <small>Medicina estética integral</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Abrir menú</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <a class="nav-tab" href="index.html#inicio">Inicio</a>
+        <a class="nav-tab" href="index.html#quienes-somos">Quiénes Somos</a>
+        <a class="nav-tab" href="index.html#servicios">Servicios</a>
+        <a class="nav-tab nav-tab--active" href="ubicacion.html">Ubicación</a>
+        <a class="nav-tab" href="index.html#contacto">Contacto</a>
+        <a class="nav-cta" href="https://wa.me/50689139229" target="_blank" rel="noreferrer">WhatsApp</a>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="section reveal location-hero">
+        <div class="location-panel">
+          <p class="eyebrow">Ubicación</p>
+          <h1>Grecia, Alajuela.</h1>
+          <p class="hero-text">
+            30 metros este de la entrada de Urgencias del Hospital San Francisco de Asís, planta baja del edificio Farmás.
+          </p>
+          <div class="location-badges">
+            <span>Atención profesional</span>
+            <span>Zona de Grecia</span>
+            <span>Acceso fácil</span>
+            <span>Amplio parqueo</span>
+            <span>Profesionales capacitados</span>
+          </div>
+          <div class="hero-actions" style="margin-top: 28px;">
+            <a class="button button-primary" href="https://maps.app.goo.gl/qLGHW8yS8Ks2QE4x8" target="_blank" rel="noreferrer">Abrir ruta en Google Maps</a>
+            <a class="button button-secondary" href="index.html#contacto">Volver al inicio</a>
+          </div>
+        </div>
+
+        <div class="map-panel">
+          <div class="panel-card">
+            <span class="panel-tag">Mapa reactivo</span>
+            <h2>Encuentra la clínica sin fricción.</h2>
+            <p>
+              Puedes revisar el mapa aquí o abrir la ruta directamente en Google Maps para viajar hasta la dirección exacta.
+            </p>
+          </div>
+          <iframe
+            class="map-frame"
+            title="Mapa de Almabela en Grecia, Alajuela"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=30%20metros%20este%20de%20la%20entrada%20de%20Urgencias%20del%20Hospital%20San%20Francisco%20de%20As%C3%ADs%2C%20Grecia%2C%20Alajuela&output=embed">
+          </iframe>
+          <div class="location-actions">
+            <a class="button button-primary" href="https://maps.app.goo.gl/qLGHW8yS8Ks2QE4x8" target="_blank" rel="noreferrer">Viajar con Google Maps</a>
+            <a class="button button-secondary" href="inicio.html">Volver al inicio</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Almabela · Rejuvenecer la piel de forma natural y segura.</p>
+      <p>Clínica médico-estética en Grecia, Alajuela.</p>
+    </footer>
+  </div>
+
+  <a class="floating-whatsapp" href="https://wa.me/50689139229" target="_blank" rel="noreferrer" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <path d="M19.11 17.58c-.27-.14-1.57-.78-1.81-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.85 1.05-.16.18-.31.2-.58.07-.27-.14-1.14-.42-2.16-1.35-.79-.7-1.32-1.56-1.48-1.83-.16-.27-.02-.42.12-.56.12-.12.27-.31.41-.46.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.6-1.44-.82-1.98-.22-.53-.44-.46-.6-.47l-.52-.01c-.18 0-.48.07-.73.34-.24.27-.95.93-.95 2.27 0 1.34.97 2.64 1.1 2.82.14.18 1.91 2.92 4.62 4.09.64.28 1.14.45 1.53.58.64.2 1.22.17 1.68.1.51-.08 1.57-.64 1.79-1.26.22-.62.22-1.15.16-1.26-.07-.11-.24-.18-.51-.32zM16.02 3C9.39 3 4 8.19 4 14.6c0 2.31.7 4.45 1.89 6.25L4 29l8.43-1.87c1.74.94 3.73 1.45 5.74 1.45 6.63 0 12.02-5.19 12.02-11.6C31.99 8.19 22.65 3 16.02 3zm0 21.27c-1.82 0-3.52-.5-4.98-1.37l-.36-.21-5 1.11 1.07-4.84-.24-.41A9.77 9.77 0 0 1 6.07 14.6c0-5.54 4.48-10.04 9.95-10.04s9.95 4.5 9.95 10.04-4.48 10.07-9.95 10.07z" fill="currentColor"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

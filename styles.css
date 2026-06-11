@@ -184,10 +184,10 @@ a {
   border: 1px solid rgba(42, 42, 42, 0.12);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.44);
-  color: var(--text) !important;
+  color: var(--text) important;
 }
 
-..menu-toggle {
+.menu-toggle {
   display: none;
   width: 48px;
   height: 48px;

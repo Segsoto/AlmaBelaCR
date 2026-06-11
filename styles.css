@@ -636,6 +636,18 @@ a {
   margin-top: 24px;
 }
 
+.team-section.team-section--reverse {
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+}
+
+.team-section.team-section--reverse .team-image {
+  order: 2;
+}
+
+.team-section.team-section--reverse .team-copy {
+  order: 1;
+}
+
 .team-image {
   border-radius: 28px;
   overflow: hidden;

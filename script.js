@@ -1,57 +1,197 @@
-const services = [
+const carouselGroups = [
   {
-    category: 'Antiedad avanzado',
-    title: 'Radiesse® + Exosomas',
-    description: 'Combinación orientada a estimular colágeno, firmeza y una mejora visible en la calidad de la piel con un enfoque elegante y natural.',
+    id: 'faciales',
+    services: [
+      {
+        category: 'Microagujas',
+        title: 'Microagujas',
+        description: 'Estimula la producción de colágeno para mejorar la textura de la piel, cicatrices y líneas finas.',
+      },
+      {
+        category: 'Limpieza Facial',
+        title: 'Limpieza Facial',
+        description: 'Elimina impurezas y células muertas para una piel más limpia, fresca y saludable.',
+      },
+      {
+        category: 'Hydrafacial',
+        title: 'Hydrafacial',
+        description: 'Limpieza profunda, hidratación y revitalización en una sola sesión.',
+      },
+      {
+        category: 'Vampire PRP',
+        title: 'Vampire PRP',
+        description: 'Regeneración natural de la piel mediante factores de crecimiento obtenidos de tu propia sangre.',
+      },
+      {
+        category: 'Cosmelan',
+        title: 'Cosmelan',
+        description: 'Tratamiento líder para la eliminación de manchas y melasma.',
+      },
+      {
+        category: 'Hollywood Peel',
+        title: 'Hollywood Peel',
+        description: 'Renueva la piel, unifica el tono y aporta luminosidad inmediata.',
+      },
+      {
+        category: 'Exosomas',
+        title: 'Exosomas',
+        description: 'Tecnología regenerativa avanzada que favorece la reparación y el rejuvenecimiento cutáneo.',
+      },
+      {
+        category: 'ADN de Salmón',
+        title: 'ADN de Salmón',
+        description: 'Bioestimulación profunda que mejora la hidratación, firmeza y calidad de la piel.',
+      },
+      {
+        category: 'Cóctel de Ojeras',
+        title: 'Cóctel de Ojeras (NCTF)',
+        description: 'Tratamiento especializado que mejora pigmentación, hidratación y signos de fatiga en el contorno de ojos.',
+      },
+    ],
   },
   {
-    category: 'Calidad de piel',
-    title: 'Polinucleótidos',
-    description: 'Apoyo regenerativo para la textura de la piel y el área de ojeras, con una línea de trabajo centrada en hidratación y reparación.',
+    id: 'estetica',
+    services: [
+      {
+        category: 'Botox',
+        title: 'Botox',
+        description: 'Suaviza líneas de expresión y previene los signos visibles del envejecimiento.',
+      },
+      {
+        category: 'Radiesse',
+        title: 'Radiesse',
+        description: 'Bioestimulador de colágeno que mejora la firmeza y calidad de la piel.',
+      },
+      {
+        category: 'Rellenos',
+        title: 'Rellenos Dérmicos',
+        description: 'Restauran volumen, armonizan rasgos y corrigen surcos de acuerdo con tus necesidades.',
+      },
+    ],
   },
   {
-    category: 'Luminosidad flash',
-    title: 'Hollywood Peel',
-    description: 'Tratamiento pensado para aportar brillo, frescura y una apariencia descansada en poco tiempo.',
+    id: 'suero',
+    services: [
+      {
+        category: 'Megadosis',
+        title: 'Megadosis de Vitamina C',
+        description: 'Potente antioxidante que fortalece el sistema inmunológico y favorece el bienestar general.',
+      },
+      {
+        category: 'NAD+',
+        title: 'Cóctel Eterna Juventud (NAD+)',
+        description: 'Terapia enfocada en la energía celular, el bienestar y el envejecimiento saludable.',
+      },
+      {
+        category: 'Myers',
+        title: 'Cóctel Myers',
+        description: 'Combinación de vitaminas y minerales que ayuda a mejorar energía, hidratación y recuperación.',
+      },
+    ],
   },
   {
-    category: 'Tecnología facial',
-    title: 'Microagujas / Dermapen',
-    description: 'Estimulación controlada de la piel para mejorar su aspecto general, acompañada de protocolos profesionales.',
+    id: 'oftalmo',
+    services: [
+      {
+        category: 'Blefaroplastia',
+        title: 'Blefaroplastia',
+        description: 'Cirugía que rejuvenece la mirada corrigiendo exceso de piel, bolsas y párpados caídos.',
+      },
+      {
+        category: 'Pterigión',
+        title: 'Cirugía de Pterigión',
+        description: 'Procedimiento para eliminar el crecimiento de tejido sobre la superficie ocular.',
+      },
+      {
+        category: 'Chalazión',
+        title: 'Curetaje de Chalazión',
+        description: 'Tratamiento quirúrgico para eliminar quistes localizados en los párpados.',
+      },
+      {
+        category: 'Ojo Seco',
+        title: 'Ojo Seco',
+        description: 'Diagnóstico y tratamiento especializado para mejorar la lubricación y comodidad ocular.',
+      },
+    ],
   },
   {
-    category: 'Contorno facial',
-    title: 'Encimas para papada',
-    description: 'Alternativa no quirúrgica para apoyar la redefinición del área submentoniana bajo evaluación profesional.',
+    id: 'enfermeria',
+    services: [
+      {
+        category: 'Inyectables',
+        title: 'Inyectables',
+        description: 'Aplicación segura y profesional de medicamentos prescritos.',
+      },
+      {
+        category: 'Curaciones',
+        title: 'Curaciones',
+        description: 'Manejo especializado de heridas para favorecer una recuperación adecuada.',
+      },
+      {
+        category: 'Educación',
+        title: 'Educación en Salud',
+        description: 'Orientación personalizada para el cuidado, prevención y promoción de la salud.',
+      },
+    ],
   },
   {
-    category: 'Bienestar interno',
-    title: 'Sueroterapia con NAD+',
-    description: 'Terapias intravenosas para personas con fatiga, estrés o exigencia física que buscan recuperar energía celular desde adentro.',
-  },
-  {
-    category: 'Respaldo médico',
-    title: 'Blefaroplastia',
-    description: 'Procedimiento para párpados caídos orientado por criterio oftalmológico especializado y seguridad clínica.',
-  },
-  {
-    category: 'Ojo seco',
-    title: 'Valoración y tratamiento ocular',
-    description: 'Atención enfocada en mejorar la calidad de vida de pacientes con molestias oculares y sequedad.',
-  },
-  {
-    category: 'Cuidado complementario',
-    title: 'Depilación láser y faciales clínicos',
-    description: 'Servicios de apoyo para una rutina estética integral, manteniendo el estándar profesional de la clínica.',
+    id: 'adicionales',
+    services: [
+      {
+        category: 'Depilación Láser',
+        title: 'Depilación Láser',
+        description: 'Tecnología avanzada para una reducción eficaz, cómoda y duradera del vello.',
+        badge: 'Unica Clinica en la zona con garantia de resultados desde la primera sesion',
+      },
+      {
+        category: 'Depilación Cuatriláser',
+        title: 'Depilación Cuatriláser',
+        description: 'Tecnología avanzada para una reducción eficaz, cómoda y duradera del vello.',
+      },
+      {
+        category: 'Novias',
+        title: 'Paquete de Novias',
+        description: 'Programa integral para lucir una piel radiante en uno de los días más importantes de tu vida.',
+      },
+      {
+        category: 'Tatuajes',
+        title: 'Remoción de Tatuajes',
+        description: 'Tratamiento láser que elimina progresivamente pigmentos no deseados.',
+      },
+      {
+        category: 'Capilar',
+        title: 'Plasma Capilar',
+        description: 'Estimula el crecimiento y fortalecimiento del cabello mediante factores de crecimiento.',
+      },
+      {
+        category: 'Mesoterapia',
+        title: 'Mesoterapia',
+        description: 'Aplicación de activos específicos para revitalizar la piel y tratar necesidades particulares.',
+      },
+      {
+        category: 'Enzimas',
+        title: 'Enzimas Lipolíticas',
+        description: 'Ayudan a reducir grasa localizada y mejorar el contorno corporal.',
+      },
+      {
+        category: 'Bambuterapia',
+        title: 'Bambuterapia',
+        description: 'Técnica corporal que favorece el drenaje, la relajación y el moldeado de la figura.',
+      },
+    ],
   },
 ];
 
-const servicesTrack = document.getElementById('services-track');
-const carouselDots = document.getElementById('carousel-dots');
-const carouselPrev = document.getElementById('carousel-prev');
-const carouselNext = document.getElementById('carousel-next');
+const initializeCarouselGroup = ({ id, services }) => {
+  const track = document.getElementById(`${id}-track`);
+  const dots = document.getElementById(`${id}-dots`);
+  const prev = document.getElementById(`${id}-prev`);
+  const next = document.getElementById(`${id}-next`);
 
-if (servicesTrack && carouselDots && carouselPrev && carouselNext) {
+  if (!track || !dots || !prev || !next || services.length === 0) {
+    return;
+  }
+
   const duplicateCount = services.length;
   const loopedServices = [
     ...services.slice(-duplicateCount),
@@ -59,19 +199,18 @@ if (servicesTrack && carouselDots && carouselPrev && carouselNext) {
     ...services.slice(0, duplicateCount),
   ];
 
-  servicesTrack.innerHTML = loopedServices
-    .map(
-      (service) => `
-        <article class="service-card" data-service-index="${services.indexOf(service)}">
-          <span class="service-category">${service.category}</span>
-          <h3>${service.title}</h3>
-          <p>${service.description}</p>
-        </article>
-      `,
-    )
+  track.innerHTML = loopedServices
+    .map((service) => `
+      <article class="service-card">
+        <span class="service-category">${service.category}</span>
+        <h3>${service.title}</h3>
+        <p>${service.description}</p>
+        ${service.badge ? `<div class="service-badge">${service.badge}</div>` : ''}
+      </article>
+    `)
     .join('');
 
-  const serviceCards = Array.from(servicesTrack.querySelectorAll('.service-card'));
+  const serviceCards = Array.from(track.querySelectorAll('.service-card'));
   const realStartIndex = duplicateCount;
   let activeIndex = 0;
   let cardOffsets = serviceCards.map((card) => card.offsetLeft);
@@ -81,7 +220,7 @@ if (servicesTrack && carouselDots && carouselPrev && carouselNext) {
     return ((index % total) + total) % total;
   };
 
-  carouselDots.innerHTML = services
+  dots.innerHTML = services
     .map(
       (_, index) => `
         <button class="carousel-dot${index === 0 ? ' is-active' : ''}" type="button" aria-label="Ir al servicio ${index + 1}" aria-pressed="${index === 0 ? 'true' : 'false'}"></button>
@@ -89,7 +228,7 @@ if (servicesTrack && carouselDots && carouselPrev && carouselNext) {
     )
     .join('');
 
-  const dotButtons = Array.from(carouselDots.querySelectorAll('.carousel-dot'));
+  const dotButtons = Array.from(dots.querySelectorAll('.carousel-dot'));
 
   const updateCarouselState = (index) => {
     dotButtons.forEach((dot, dotIndex) => {
@@ -104,21 +243,15 @@ if (servicesTrack && carouselDots && carouselPrev && carouselNext) {
     const realIndex = normalizeIndex(index);
     const targetCard = serviceCards[realStartIndex + realIndex];
 
-    servicesTrack.scrollTo({
+    track.scrollTo({
       left: targetCard.offsetLeft,
       behavior,
     });
     updateCarouselState(realIndex);
   };
 
-  carouselPrev.addEventListener('click', () => {
-    scrollToIndex(activeIndex - 1);
-  });
-
-  carouselNext.addEventListener('click', () => {
-    scrollToIndex(activeIndex + 1);
-  });
-
+  prev.addEventListener('click', () => scrollToIndex(activeIndex - 1));
+  next.addEventListener('click', () => scrollToIndex(activeIndex + 1));
   dotButtons.forEach((dot, index) => {
     dot.addEventListener('click', () => scrollToIndex(index));
   });
@@ -128,13 +261,13 @@ if (servicesTrack && carouselDots && carouselPrev && carouselNext) {
   const setInitialPosition = () => {
     cardOffsets = serviceCards.map((card) => card.offsetLeft);
     isAdjustingLoop = true;
-    const previousScrollBehavior = servicesTrack.style.scrollBehavior;
-    servicesTrack.style.scrollBehavior = 'auto';
-    servicesTrack.scrollTo({
+    const previousScrollBehavior = track.style.scrollBehavior;
+    track.style.scrollBehavior = 'auto';
+    track.scrollTo({
       left: serviceCards[realStartIndex].offsetLeft,
       behavior: 'auto',
     });
-    servicesTrack.style.scrollBehavior = previousScrollBehavior;
+    track.style.scrollBehavior = previousScrollBehavior;
     isAdjustingLoop = false;
     updateCarouselState(0);
   };
@@ -153,24 +286,24 @@ if (servicesTrack && carouselDots && carouselPrev && carouselNext) {
     const total = services.length;
     const currentRawIndex = cardOffsets.reduce((closestIndex, offset, index) => {
       const closestOffset = cardOffsets[closestIndex];
-      return Math.abs(offset - servicesTrack.scrollLeft) < Math.abs(closestOffset - servicesTrack.scrollLeft)
+      return Math.abs(offset - track.scrollLeft) < Math.abs(closestOffset - track.scrollLeft)
         ? index
         : closestIndex;
     }, 0);
 
     if (currentRawIndex < total) {
       isAdjustingLoop = true;
-      const previousScrollBehavior = servicesTrack.style.scrollBehavior;
-      servicesTrack.style.scrollBehavior = 'auto';
-      servicesTrack.scrollLeft = serviceCards[currentRawIndex + total].offsetLeft;
-      servicesTrack.style.scrollBehavior = previousScrollBehavior;
+      const previousScrollBehavior = track.style.scrollBehavior;
+      track.style.scrollBehavior = 'auto';
+      track.scrollLeft = serviceCards[currentRawIndex + total].offsetLeft;
+      track.style.scrollBehavior = previousScrollBehavior;
       isAdjustingLoop = false;
     } else if (currentRawIndex >= total * 2) {
       isAdjustingLoop = true;
-      const previousScrollBehavior = servicesTrack.style.scrollBehavior;
-      servicesTrack.style.scrollBehavior = 'auto';
-      servicesTrack.scrollLeft = serviceCards[currentRawIndex - total].offsetLeft;
-      servicesTrack.style.scrollBehavior = previousScrollBehavior;
+      const previousScrollBehavior = track.style.scrollBehavior;
+      track.style.scrollBehavior = 'auto';
+      track.scrollLeft = serviceCards[currentRawIndex - total].offsetLeft;
+      track.style.scrollBehavior = previousScrollBehavior;
       isAdjustingLoop = false;
     }
 
@@ -180,17 +313,16 @@ if (servicesTrack && carouselDots && carouselPrev && carouselNext) {
     }
   };
 
-  servicesTrack.addEventListener('scroll', () => {
+  track.addEventListener('scroll', () => {
     window.requestAnimationFrame(updateLoopPosition);
   });
 
-  window.addEventListener('resize', () => {
-    initializeCarousel();
-  });
-
+  window.addEventListener('resize', initializeCarousel);
   window.addEventListener('load', initializeCarousel);
   initializeCarousel();
-}
+};
+
+carouselGroups.forEach(initializeCarouselGroup);
 
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('.site-nav');

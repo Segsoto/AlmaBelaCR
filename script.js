@@ -94,9 +94,9 @@ const carouselGroups = [
     services: [
       {
         category: 'Blefaroplastia',
-        title: 'Blefaroplastia',
-        description: 'Cirugía que rejuvenece la mirada corrigiendo exceso de piel, bolsas y párpados caídos.',
-      },
+        title: "Blefaroplastia en Grecia",
+  description: "Única clínica en Grecia, Alajuela con especialista para cirugía que rejuvenece la mirada corrigiendo exceso de piel, bolsas y párpados caídos."
+},
       {
         category: 'Pterigión',
         title: 'Cirugía de Pterigión',

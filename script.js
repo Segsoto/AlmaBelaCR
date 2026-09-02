@@ -336,6 +336,7 @@ menuToggle.addEventListener('click', () => {
 siteNav.addEventListener('click', (event) => {
   if (event.target.matches('a')) {
     siteNav.classList.remove('is-open');
+    menuToggle.classList.remove('is-active');
     menuToggle.setAttribute('aria-expanded', 'false');
   }
 });
@@ -350,7 +351,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.16 },
+  { threshold: 0.12 },
 );
 
 revealElements.forEach((element) => observer.observe(element));
